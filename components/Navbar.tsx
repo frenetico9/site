@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { NAV_ITEMS, PlaceholderPigeonIcon } from '../constants';
 

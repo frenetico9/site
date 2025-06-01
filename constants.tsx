@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavItem } from './types';
 
@@ -17,12 +16,12 @@ export const SECTION_IDS = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Início", href: `#${SECTION_IDS.hero}` },
-  { label: "A Lenda", href: `#${SECTION_IDS.about}` },
+  { label: "Home", href: `#${SECTION_IDS.hero}` },
+  { label: "The Legend", href: `#${SECTION_IDS.about}` },
   { label: "$POOPnomics", href: `#${SECTION_IDS.tokenomics}` },
-  { label: "Plano de Voo", href: `#${SECTION_IDS.roadmap}` },
-  { label: "Comprar $POOP", href: `#${SECTION_IDS.howToBuy}` },
-  { label: "Comunidade", href: `#${SECTION_IDS.community}` },
+  { label: "Flight Plan", href: `#${SECTION_IDS.roadmap}` },
+  { label: "Buy $POOP", href: `#${SECTION_IDS.howToBuy}` },
+  { label: "Community", href: `#${SECTION_IDS.community}` },
 ];
 
 export const SOCIAL_LINKS = {

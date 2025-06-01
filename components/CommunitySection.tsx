@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import Button from './Button';
@@ -30,8 +29,8 @@ const CommunitySection: React.FC<CommunitySectionProps> = ({ id }) => {
   return (
     <Section 
       id={id} 
-      title="Junte-se à Revoada!"
-      subtitle="Faça parte do bando! Siga-nos, crie memes, participe das discussões e ajude a espalhar a palavra (ou o 'poop')."
+      title="Join the Flock!"
+      subtitle="Be part of the flock! Follow us, create memes, join discussions, and help spread the word (or the 'poop')."
       className="bg-yellow-50"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -42,11 +41,11 @@ const CommunitySection: React.FC<CommunitySectionProps> = ({ id }) => {
       </div>
       <div className="mt-12 text-center">
         <p className="text-lg text-gray-700 mb-4">
-          Nossa comunidade é o nosso maior trunfo (depois do lixo de alta qualidade, claro).
-          Seja ativo, seja criativo, seja um pombo orgulhoso!
+          Our community is our greatest asset (after high-quality trash, of course).
+          Be active, be creative, be a proud pigeon!
         </p>
         <Button href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
-          Entrar no Grupo Principal (Telegram)
+          Join Main Group (Telegram)
         </Button>
       </div>
     </Section>

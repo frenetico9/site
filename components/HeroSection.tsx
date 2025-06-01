@@ -25,20 +25,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
         
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
           <span className="block text-gray-800">PigeonPoopCoin ({TICKER}):</span>
-          <span className="block text-yellow-500">A Revolução Emplumada Começou!</span>
+          <span className="block text-yellow-500">The Feathered Revolution Has Begun!</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto px-4">
-          Invista na moeda que vai voar mais alto que seus sonhos (e talvez cagar neles)!
+          Invest in the coin that will fly higher than your dreams (and maybe poop on them)!
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button href={`#${SECTION_IDS.howToBuy}`} variant="primary" size="lg">
-            Compre {TICKER} Agora! 🚀
+            Buy {TICKER} Now! 🚀
           </Button>
           <Button href={`#${SECTION_IDS.about}`} variant="outline" size="lg"> 
-            Leia o Pigeon Paper 📜
+            Read the Pigeon Paper 📜
           </Button>
           <Button href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" variant="secondary" size="lg" className="bg-blue-500 hover:bg-blue-600 text-white focus:ring-blue-500">
-            Junte-se à Revoada (Telegram) 🐦
+            Join the Flock (Telegram) 🐦
           </Button>
         </div>
       </div>

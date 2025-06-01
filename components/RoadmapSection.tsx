@@ -1,54 +1,53 @@
-
 import React from 'react';
 import Section from './Section';
 import { RoadmapPhase } from '../types';
 
 const roadmapPhases: RoadmapPhase[] = [
   {
-    id: "fase1",
-    title: "Fase 1: Construindo o Ninho 🥚",
-    description: "Primeiro, o básico: encontrar os melhores galhos e migalhas.",
+    id: "phase1",
+    title: "Phase 1: Building the Nest 🥚",
+    description: "First, the basics: finding the best twigs and crumbs.",
     details: [
-      "Lançamento do site V1 (este que você está vendo, impressionante, né?)",
-      "Criação da comunidade (Telegram, X, Discord - venha dar um pio!)",
-      "Lançamento justo na PancakeSwap (ou UniSwap, os pombos estão decidindo)",
-      "Primeira campanha de memes - liberem a criatividade!",
+      "Website V1 Launch (this one you're looking at, impressive, right?)",
+      "Community Building (Telegram, X, Discord - come say coo!)",
+      "Fair Launch on PancakeSwap (or UniSwap, the pigeons are deciding)",
+      "First Meme Campaign - unleash the creativity!",
     ],
     icon: <span className="text-4xl">🥚</span>
   },
   {
-    id: "fase2",
-    title: "Fase 2: Alçando Voo 🚀",
-    description: "Expandir o território, mais pombos na revoada!",
+    id: "phase2",
+    title: "Phase 2: Taking Flight 🚀",
+    description: "Expanding the territory, more pigeons in the flock!",
     details: [
-      "Parcerias com influenciadores 'pássaros' (e alguns humanos legais)",
-      "Listagem em CoinGecko e CoinMarketCap (para sermos oficialmente 'algo')",
-      "Desenvolvimento de ferramentas de meme exclusivas para a comunidade",
-      "Listagem em CEX menores (os pombos estão negociando)",
+      "Partnerships with 'bird' influencers (and some cool humans)",
+      "Listing on CoinGecko & CoinMarketCap (to be officially 'a thing')",
+      "Development of exclusive meme tools for the community",
+      "Listing on smaller CEXs (the pigeons are negotiating)",
     ],
     icon: <span className="text-4xl">🚀</span>
   },
   {
-    id: "fase3",
-    title: "Fase 3: Dominando os Céus 👑",
-    description: "O céu NÃO é o limite!",
+    id: "phase3",
+    title: "Phase 3: Dominating the Skies 👑",
+    description: "The sky is NOT the limit!",
     details: [
-      "Lançamento de mercadorias (camisetas 'Eu Acredito nos Pombos', bonés 'Mestre do Lixo')",
-      "Coleção de NFTs de Pombos Engenheiros (cada um mais maluco que o outro)",
-      "Projeto de caridade para 'pombos menos afortunados' (e talvez alguns abrigos de animais)",
-      "Explorar parcerias 'cross-chain' (pombos adoram viajar)",
+      "Merchandise Launch ('I Believe in Pigeons' T-shirts, 'Master of Trash' caps)",
+      "Engineer Pigeons NFT Collection (each crazier than the last)",
+      "Charity project for 'less fortunate pigeons' (and maybe some animal shelters)",
+      "Explore 'cross-chain' partnerships (pigeons love to travel)",
     ],
     icon: <span className="text-4xl">👑</span>
   },
   {
-    id: "faseX",
-    title: "Fase X: O Futuro é Pombo... Ou Algo Assim 🔮",
-    description: "Dominação mundial... ou apenas mais memes. Veremos.",
+    id: "phaseX",
+    title: "Phase X: The Future is Pigeon... Or Something Like That 🔮",
+    description: "World domination... or just more memes. We'll see.",
     details: [
-      "Construção da Embaixada Pombal na Lua (financiada por $POOP, claro)",
-      "Desenvolvimento de IA pombal para prever o mercado (e onde encontrar as melhores batatas fritas caídas)",
-      "Lobby para que 'arrulho' seja reconhecido como língua oficial da ONU",
-      "Continuar sendo a memecoin mais divertida e engenhosa do pedaço!",
+      "Construction of the Pigeon Embassy on the Moon (funded by $POOP, of course)",
+      "Development of pigeon AI to predict the market (and where to find the best-dropped fries)",
+      "Lobbying for 'coo' to be recognized as an official UN language",
+      "Continue being the most fun and ingenious memecoin around!",
     ],
     icon: <span className="text-4xl">🔮</span>
   },
@@ -90,8 +89,8 @@ const RoadmapSection: React.FC<RoadmapSectionProps> = ({ id }) => {
   return (
     <Section 
       id={id} 
-      title="O Plano de Voo de $POOP"
-      subtitle="Nossa jornada épica rumo à dominação... das migalhas e dos memes!"
+      title="The $POOP Flight Plan"
+      subtitle="Our epic journey towards domination... of crumbs and memes!"
       className="bg-blue-50"
     >
       <div className="relative">

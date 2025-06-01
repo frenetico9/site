@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Section from './Section';
 import { FaqItem } from '../types';
@@ -6,28 +5,28 @@ import { FaqItem } from '../types';
 const faqItems: FaqItem[] = [
   {
     id: "q1",
-    question: "Isso é sério? Tipo, sério mesmo?",
-    answer: "Tão sério quanto um pombo encarando um pedaço de pão caído no chão. Ou seja, é MUITO divertido, mas lembre-se que memecoins são um voo selvagem e altamente especulativo. Invista com responsabilidade e apenas o que você pode perder (tipo aquela meia que sumiu na máquina de lavar)."
+    question: "Is this serious? Like, for real?",
+    answer: "As serious as a pigeon staring at a dropped piece of bread. Meaning, it's VERY fun, but remember memecoins are a wild and highly speculative flight. Invest responsibly and only what you can afford to lose (like that sock that disappeared in the washing machine)."
   },
   {
     id: "q2",
-    question: "Os pombos realmente vão dominar o mundo?",
-    answer: "Estamos trabalhando nisso. Um cocô de cada vez. $POOP é o primeiro passo para financiar nossa infraestrutura global de coleta de lixo e redes de comunicação baseadas em 'arrulhos'. O futuro é emplumado."
+    question: "Are pigeons really going to take over the world?",
+    answer: "We're working on it. One poop at a time. $POOP is the first step to funding our global trash collection infrastructure and 'coo'-based communication networks. The future is feathered."
   },
   {
     id: "q3",
-    question: "Quando Lambo... ou melhor, Quando Pão Velho de Padaria Chique?",
-    answer: "Nosso objetivo é alcançar o 'Modo Pão de Forma Integral Artesanal com Sementes Exóticas'. A paciência é uma virtude de pombo. Foque na comunidade, nos memes e em se divertir. O 'pão velho' virá para aqueles que acreditam na revoada!"
+    question: "When Lambo... or rather, When Fancy Bakery Stale Bread?",
+    answer: "Our goal is to achieve 'Artisanal Whole Wheat Sourdough with Exotic Seeds' mode. Patience is a pigeon's virtue. Focus on the community, the memes, and having fun. The 'stale bread' will come to those who believe in the flock!"
   },
   {
     id: "q4",
-    question: "Onde posso encontrar o endereço oficial do contrato $POOP?",
-    answer: "O endereço oficial do contrato $POOP será SEMPRE claramente anunciado em nosso site (aqui mesmo!) e em nossos canais oficiais (Telegram, X). Cuidado com os pombos falsos e golpistas! Verifique três vezes antes de colar."
+    question: "Where can I find the official $POOP contract address?",
+    answer: "The official $POOP contract address will ALWAYS be clearly announced on our website (right here!) and on our official channels (Telegram, X). Beware of fake pigeons and scammers! Triple-check before pasting."
   },
   {
     id: "q5",
-    question: "Como posso ajudar a revolução dos pombos?",
-    answer: "Excelente pergunta, humano perspicaz! Compre $POOP, guarde $POOP, fale sobre $POOP, crie memes sobre $POOP, use a hashtag #PigeonPoopCoin. Junte-se à nossa comunidade e seja um pombo honorário! Quanto mais barulho (e 'poop') fizermos, mais alto voaremos."
+    question: "How can I help the pigeon revolution?",
+    answer: "Excellent question, perceptive human! Buy $POOP, hold $POOP, talk about $POOP, create memes about $POOP, use the hashtag #PigeonPoopCoin. Join our community and be an honorary pigeon! The more noise (and 'poop') we make, the higher we'll fly."
   }
 ];
 
@@ -76,8 +75,8 @@ const FaqSection: React.FC<FaqSectionProps> = ({ id }) => {
   return (
     <Section 
       id={id} 
-      title="Perguntas Frequentes de Pombos Curiosos (e Humanos Também)"
-      subtitle="Suas dúvidas mais cabeludas (ou emplumadas) respondidas."
+      title="Frequently Asked Questions from Curious Pigeons (and Humans Too)"
+      subtitle="Your hairiest (or feathered) questions answered."
       className="bg-gray-100"
     >
       <div className="max-w-3xl mx-auto space-y-4">

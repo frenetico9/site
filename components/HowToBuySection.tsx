@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import Button from './Button';
@@ -34,49 +33,49 @@ const HowToBuySection: React.FC<HowToBuySectionProps> = ({ id }) => {
   return (
     <Section 
       id={id} 
-      title={`Como Comprar ${TICKER} (O Guia do Pombocalouro)`}
-      subtitle="Siga estes passos simples e junte-se à revoada financeira!"
+      title={`How to Buy ${TICKER} (The Pigeon Fledgling's Guide)`}
+      subtitle="Follow these simple steps and join the financial flock!"
       className="bg-gray-50"
     >
       <div className="max-w-2xl mx-auto grid gap-6 md:gap-8">
         <Step 
           number={1} 
-          title="Crie uma Carteira Digital" 
-          description="Você precisa de uma carteira que suporte a rede Binance Smart Chain (BSC) ou Ethereum (ETH), como MetaMask ou Trust Wallet. Guarde bem sua frase secreta, nem os pombos podem recuperá-la!"
+          title="Create a Digital Wallet" 
+          description="You need a wallet that supports Binance Smart Chain (BSC) or Ethereum (ETH), like MetaMask or Trust Wallet. Keep your secret phrase safe, not even pigeons can recover it!"
           icon={<WalletIcon />}
         />
         <Step 
           number={2} 
-          title="Adicione BNB/ETH à Carteira" 
-          description={`Compre BNB (para BSC) ou ETH (para Ethereum) em uma corretora e envie para sua carteira. Este será o 'alpiste' para trocar por ${TICKER}.`}
+          title="Add BNB/ETH to Your Wallet" 
+          description={`Buy BNB (for BSC) or ETH (for Ethereum) on an exchange and send it to your wallet. This will be the 'birdseed' to swap for ${TICKER}.`}
           icon={<NetworkIcon />}
         />
         <Step 
           number={3} 
-          title="Conecte à DEX (PancakeSwap/UniSwap)" 
-          description={`Vá para PancakeSwap (para BSC) ou UniSwap (para ETH) no navegador da sua carteira ou no seu PC. Conecte sua carteira. Cuidado com sites falsos, use apenas os links oficiais!`}
+          title="Connect to a DEX (PancakeSwap/UniSwap)" 
+          description={`Go to PancakeSwap (for BSC) or UniSwap (for ETH) in your wallet's browser or on your PC. Connect your wallet. Beware of fake sites, use only official links!`}
           icon={<SwapIcon />}
         />
         <Step 
           number={4} 
-          title={`Troque por ${TICKER}`}
-          description={`Encontre a seção de 'Swap'. Cole o endereço do contrato oficial de ${TICKER} (abaixo!). Selecione BNB/ETH como moeda de troca e ${TICKER} como a moeda que você quer receber. Defina a quantidade, aprove a transação e confirme o swap!`}
+          title={`Swap for ${TICKER}`}
+          description={`Find the 'Swap' section. Paste the official ${TICKER} contract address (below!). Select BNB/ETH as the currency to trade and ${TICKER} as the currency you want to receive. Set the amount, approve the transaction, and confirm the swap!`}
           icon={<PoopIcon />}
         />
       </div>
       <div className="mt-12 text-center">
-        <h4 className="text-xl font-semibold text-gray-800 mb-2">Endereço Oficial do Contrato {TICKER}:</h4>
+        <h4 className="text-xl font-semibold text-gray-800 mb-2">Official {TICKER} Contract Address:</h4>
         <div className="bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-3 rounded-lg inline-block break-all shadow">
           <p className="font-mono text-sm md:text-base">{CONTRACT_ADDRESS}</p>
         </div>
-        <p className="mt-2 text-xs text-gray-500">(Sempre verifique o endereço em nossos canais oficiais antes de comprar! Pombo prevenido vale por dois!)</p>
+        <p className="mt-2 text-xs text-gray-500">(Always verify the address on our official channels before buying! A cautious pigeon is worth two in the bush!)</p>
       </div>
       <div className="mt-10 text-center">
         <Button href="https://pancakeswap.finance/swap" target="_blank" rel="noopener noreferrer" variant="primary" size="lg" className="mr-4">
-          Ir para PancakeSwap (BSC)
+          Go to PancakeSwap (BSC)
         </Button>
         <Button href="https://app.uniswap.org/#/swap" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">
-          Ir para UniSwap (ETH)
+          Go to UniSwap (ETH)
         </Button>
       </div>
     </Section>
