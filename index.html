@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PigeonPoopCoin ($POOP)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom animation for HeroSection mascot image */
+      @keyframes bounce-slow {
+        0%, 100% {
+          transform: translateY(-3%);
+          animation-timing-function: cubic-bezier(0.8,0,1,1);
+        }
+        50% {
+          transform: translateY(0);
+          animation-timing-function: cubic-bezier(0,0,0.2,1);
+        }
+      }
+      /* Class used in HeroSection.tsx for the mascot image animation */
+      .animate-bounce-slow {
+        animation: bounce-slow 3s infinite;
+      }
+
+      /* Custom animation for PoopEmojiRain effect */
+      @keyframes fall {
+        0% { 
+          transform: translateY(-10vh) rotate(0deg); 
+          opacity: 1; /* Start visible for animation */
+        }
+        100% { 
+          transform: translateY(110vh) rotate(720deg); 
+          opacity: 0.5; /* Fade slightly at the end */
+        }
+      }
+      /* Base class for poop emojis, used in App.tsx PoopEmojiRain component */
+      .poop-emoji-base {
+        position: absolute;
+        /* font-size is applied via Tailwind class e.g. text-3xl in the component */
+        animation-name: fall;
+        animation-timing-function: linear;
+        opacity: 1; /* Start with full opacity, keyframes will handle fade */
+        will-change: transform, opacity;
+      }
+
+      /* Ensure page is at least 100vh and body/html take full height */
+      html, body, #root {
+        min-height: 100vh;
+      }
+      body {
+        font-family: 'Inter', sans-serif; 
+      }
+    </style>
+    <!-- Google Fonts: Inter for body, Luckiest Guy for display, Bangers (optional alternative display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Luckiest+Guy&family=Bangers&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Luckiest Guy', 'cursive'], 
+            },
+            colors: { 
+              pigeon: {
+                light: '#A8A29E', 
+                DEFAULT: '#78716C', 
+                dark: '#57534E', 
+              },
+              poopYellow: { 
+                DEFAULT: '#FACC15', 
+                dark: '#EAB308', 
+              }
+            },
+            zIndex: { // Ensure PoopEmojiRain is on top
+              '1000': '1000',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="flex flex-col"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
