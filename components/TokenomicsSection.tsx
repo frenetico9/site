@@ -6,14 +6,23 @@ interface TokenomicsSectionProps {
   id: string;
 }
 
-const TokenomicItem: React.FC<{ title: string, description: string, value: string, icon: string }> = ({ title, description, value, icon }) => (
-  <div className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
-    <div className="flex items-center mb-3">
-      <span className="text-3xl mr-3">{icon}</span>
-      <h3 className="text-xl font-bold text-gray-800 font-display">{title}</h3>
-    </div>
-    <p className="text-2xl font-semibold text-yellow-600 mb-2">{value}</p>
-    <p className="text-gray-600 text-sm">{description}</p>
+// Define more engaging icons, perhaps as SVG components or emojis
+const Icons = {
+  Supply: () => <span className="text-4xl">🌍</span>, // Globe for total supply
+  Liquidity: () => <span className="text-4xl">💧</span>, // Water drop for liquidity
+  Marketing: () => <span className="text-4xl">📢</span>, // Megaphone
+  Burn: () => <span className="text-4xl">🔥</span>, // Fire
+  Team: () => <span className="text-4xl">🧑‍🔬</span>, // Scientist/Engineer pigeon
+  Fee: () => <span className="text-4xl">💸</span>, // Money with wings
+  Security: () => <span className="text-4xl">🛡️</span>, // Shield for security
+};
+
+const TokenomicItem: React.FC<{ title: string, description: string, value: string, icon: React.ReactNode }> = ({ title, description, value, icon }) => (
+  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-poopYellow-DEFAULT flex flex-col items-center text-center h-full">
+    <div className="text-5xl mb-3 text-poopYellow-dark">{icon}</div>
+    <h3 className="text-2xl font-bold text-pigeon-dark font-display mb-2">{title}</h3>
+    <p className="text-3xl font-semibold text-poopYellow-dark mb-3">{value}</p>
+    <p className="text-gray-600 text-sm flex-grow">{description}</p>
   </div>
 );
 
@@ -22,60 +31,59 @@ const TokenomicsSection: React.FC<TokenomicsSectionProps> = ({ id }) => {
   return (
     <Section 
       id={id} 
-      title={`${TICKER}nomics: The Flock's Economy`}
-      subtitle="Understand how our precious poop... erm, token, works!"
-      className="bg-gray-100"
+      title={`${TICKER}nomics: Fueling the Feathered Financial Frenzy!`}
+      subtitle="Where every 'drop' counts towards our glorious, shiny, and slightly messy future."
+      className="bg-skyBlue-light" // Changed background for variety
     >
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
         <TokenomicItem 
-          icon=" सप्लाई" // Using a Unicode character that might look like a supply stack or use an emoji: 📦
-          title="Total Supply"
+          icon={<Icons.Supply />}
+          title="Total $POOP Supply"
           value="1 Trillion $POOP"
-          description="Enough for every pigeon, their chicks, and their chicks' chicks... and maybe a few squirrels."
+          description="Enough to bury naysayers in riches (or, you know, actual poop). And for every pigeon to have a winter home in the Bahamas."
         />
         <TokenomicItem 
-          icon="💧" // Water drop for liquidity
-          title="Liquidity Nest"
+          icon={<Icons.Liquidity />}
+          title="Liquidity Nest Egg"
           value="60% Initial"
-          description="To ensure there are always crumbs (tokens) to trade on DEXs. Locked and secure!"
+          description="Locked tighter than a pigeon's grip on a discarded French fry. Ensures smooth trading for all flock members."
         />
         <TokenomicItem 
-          icon="📢" // Megaphone for marketing
-          title="Cooing War Chest"
-          value="20% Marketing"
-          description="To spread the word, fund high-quality memes, and bribe influential pigeons."
+          icon={<Icons.Marketing />}
+          title="Cooing War Chest (Marketing)"
+          value="20% Strategic Droppings"
+          description="For viral memes, pigeon propaganda, hiring influencer-parrots, and maybe a billboard on the moon."
         />
         <TokenomicItem 
-          icon="🔥" // Fire for burn
-          title="Cleaning Up The Mess (Burn)"
-          value="10% Burned"
-          description="A portion of tokens is sent to oblivion (a pigeon fiscal black hole) to increase value!"
+          icon={<Icons.Burn />}
+          title="The Great Token Flush (Burn)"
+          value="10% Sacrificed"
+          description="Sending tokens to the great birdbath in the sky, making your precious $POOP even more valuable! It's deflationary magic!"
         />
          <TokenomicItem 
-          icon="🧑‍💻" // Developer emoji
-          title="Builders' Birdseed"
-          value="10% Team/Development"
-          description="To keep our engineer pigeons well-fed with the best seeds and brilliant ideas."
+          icon={<Icons.Team />}
+          title="Builders' Birdseed (Team & Dev)"
+          value="5% For The Geniuses"
+          description="Keeps our avian Einsteins fueled with premium sunflower seeds, wild ideas, and tiny lab coats."
         />
         <TokenomicItem 
-          icon="💸" // Money with wings for fees
-          title="Flock Fee"
-          value="Small Transaction Fee"
-          description="A minimal fee on each trade to feed the developer pigeons, fund new trash tools, and keep the community flying high."
+          icon={<Icons.Fee />} // Assuming a small reflection/ecosystem fee
+          title="Flock Sustenance Fee"
+          value="5% Ecosystem Growth"
+          description="A tiny crumb from each trade to fund new trash-to-treasure tech, community events, and more shiny things for the nest."
         />
       </div>
       
-      <div className="text-center mt-12">
-        <div className="inline-block bg-green-100 border-l-4 border-green-500 text-green-700 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-          <h4 className="font-bold text-xl mb-2 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.491A9.027 9.027 0 0112 4.5c-2.126 0-4.078.763-5.618 2.009m0 0A9.009 9.009 0 003.382 19.5M12 4.5C13.172 4.5 14.298 4.762 15.303 5.238m-3.303-.729A9.009 9.009 0 0112 21c2.126 0 4.078-.763 5.618-2.009m0 0A9.009 9.009 0 0020.618 4.5M12 21c-1.172 0-2.298-.262-3.303-.738m3.303.729A9.009 9.009 0 0012 4.5" />
-            </svg>
-            Nest Security
-          </h4>
-          <p className="text-gray-700">
-            "As secure as a nest on top of a skyscraper (well, almost!). Our contract is as solid as pigeon concrete. Audit coming soon (as soon as the pigeon accountants finish pecking at the numbers and find their glasses)."
+      <div className="text-center mt-16">
+        <div className="inline-block bg-pigeon-light border-4 border-pigeon-DEFAULT text-pigeon-dark p-6 md:p-8 rounded-xl shadow-2xl max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300">
+          <div className="flex justify-center items-center mb-3">
+            <Icons.Security />
+            <h4 className="font-display text-3xl ml-3">Our Fort Knox... of Nests!</h4>
+          </div>
+          <p className="text-gray-700 text-lg">
+            "Our contract is audited by a team of highly caffeinated owls and squirrel accountants. So secure, it's almost boring. We take your birdseed seriously (but not ourselves)."
           </p>
+          <p className="text-sm text-gray-500 mt-3">(Audit report coming soon - the lead owl is currently molting his spectacles.)</p>
         </div>
       </div>
     </Section>

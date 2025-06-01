@@ -12,29 +12,30 @@ import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import { SECTION_IDS } from './constants';
 
+// The magical poop rain generator. It's like a faucet, but for pure comedy gold.
 const PoopEmojiRain: React.FC = () => {
   const [emojis, setEmojis] = useState<{ id: number; style: React.CSSProperties; sizeClass: string }[]>([]);
 
   useEffect(() => {
     const createEmoji = () => {
       const id = Date.now() + Math.random();
-      const sizes = ['text-xl', 'text-2xl', 'text-3xl', 'text-4xl'];
+      const sizes = ['text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl']; // Slightly adjusted sizes
       const style = {
         left: `${Math.random() * 100}vw`,
-        animationDelay: `${Math.random() * 7}s`, 
-        animationDuration: `${4 + Math.random() * 5}s`,
+        animationDelay: `${Math.random() * 6}s`, // Slightly faster delay spread
+        animationDuration: `${3 + Math.random() * 4}s`, // Slightly faster duration
       };
       const sizeClass = sizes[Math.floor(Math.random() * sizes.length)];
       return { id, style, sizeClass };
     };
 
-    // Pre-populate some emojis for initial effect
-    const initialEmojis = Array.from({ length: 15 }, createEmoji); // Create 15 emojis initially
+    // Pre-populate a good shower of emojis for immediate comedic effect
+    const initialEmojis = Array.from({ length: 20 }, createEmoji); // Increased initial emojis
     setEmojis(initialEmojis);
 
     const interval = setInterval(() => {
-      setEmojis(prevEmojis => [...prevEmojis.slice(-50), createEmoji()]); // Keep max 50 emojis
-    }, 400); 
+      setEmojis(prevEmojis => [...prevEmojis.slice(-60), createEmoji()]); // Keep max 60 emojis, add one
+    }, 300); // Faster interval for more rain
 
     return () => clearInterval(interval);
   }, []);
@@ -57,7 +58,7 @@ const PoopEmojiRain: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-skyBlue-light"> {/* Added a subtle background color to the whole app */}
       <PoopEmojiRain />
       <Navbar />
       <main className="flex-grow">

@@ -16,12 +16,12 @@ export const SECTION_IDS = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: `#${SECTION_IDS.hero}` },
-  { label: "The Legend", href: `#${SECTION_IDS.about}` },
-  { label: "$POOPnomics", href: `#${SECTION_IDS.tokenomics}` },
-  { label: "Flight Plan", href: `#${SECTION_IDS.roadmap}` },
-  { label: "Buy $POOP", href: `#${SECTION_IDS.howToBuy}` },
-  { label: "Community", href: `#${SECTION_IDS.community}` },
+  { label: "Home Base", href: `#${SECTION_IDS.hero}` },
+  { label: "The Secret Lore", href: `#${SECTION_IDS.about}` },
+  { label: "$POOPnomics 101", href: `#${SECTION_IDS.tokenomics}` },
+  { label: "World Domi-Nest-ion Plan", href: `#${SECTION_IDS.roadmap}` },
+  { label: "Get Your $POOP", href: `#${SECTION_IDS.howToBuy}` },
+  { label: "Join the Flock", href: `#${SECTION_IDS.community}` },
 ];
 
 export const SOCIAL_LINKS = {
@@ -31,7 +31,8 @@ export const SOCIAL_LINKS = {
   reddit: "https://reddit.com/r/pigeonpoopcoin", // Placeholder
 };
 
-export const CONTRACT_ADDRESS = "0xPOOP123456789ABCDEF00000RoostingSoon"; // Placeholder
+// This is where the magic happens... or where the pigeons hide their bread.
+export const CONTRACT_ADDRESS = "0xPOOP123456789ABCDEF00000WeAreWatchingYou"; // Placeholder - even more humor
 
 // Placeholder Mascot SVG (simple pigeon icon)
 export const PlaceholderPigeonIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -40,14 +41,23 @@ export const PlaceholderPigeonIcon: React.FC<{ className?: string }> = ({ classN
   </svg>
 );
 
-// More stylized pigeon icon
+// More stylized pigeon icon - our hero, our mascot, our chief breadcrumb strategist.
 export const FunkyPigeonIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 10C38.95 10 30 18.95 30 30C30 34.42 31.79 38.46 34.65 41.55L15 65V70H37.5L50 90L62.5 70H85V65L65.35 41.55C68.21 38.46 70 34.42 70 30C70 18.95 61.05 10 50 10ZM50 20C55.52 20 60 24.48 60 30C60 30.75 59.9 31.48 59.73 32.18C58.19 30.82 56.08 30 53.5 30C48.91 30 45.03 32.66 42.6 36.25L40.66 33.4C40.23 32.74 40 31.93 40 31.09C40 24.96 44.48 20 50 20Z" />
-    <path d="M53.5 32C57.09 32 60 34.91 60 38.5C60 42.09 57.09 45 53.5 45C49.91 45 47 42.09 47 38.5C47 34.91 49.91 32 53.5 32Z" opacity="0.7"/>
-    {/* Simple glasses */}
-    <circle cx="45" cy="30" r="5" fill="none" stroke="#333" strokeWidth="2"/>
-    <circle cx="55" cy="30" r="5" fill="none" stroke="#333" strokeWidth="2"/>
-    <line x1="50" y1="30" x2="50" y2="30" stroke="#333" strokeWidth="2"/>
+    {/* Body and Head */}
+    <path d="M50,15 C35,15 25,28 25,40 C25,48 30,55 38,58 L20,75 L25,80 L40,70 L50,90 L60,70 L75,80 L80,75 L62,58 C70,55 75,48 75,40 C75,28 65,15 50,15 Z" fill="#78716C"/> {/* Pigeon Gray Body */}
+    {/* Beak */}
+    <polygon points="50,42 55,48 45,48" fill="#FACC15"/> {/* PoopYellow Beak */}
+    {/* Eye */}
+    <circle cx="43" cy="38" r="4" fill="white"/>
+    <circle cx="43" cy="38" r="2" fill="black"/>
+     {/* Mad Scientist Goggles - made of wire and hope */}
+    <circle cx="38" cy="38" r="8" fill="none" stroke="#57534E" strokeWidth="2.5"/> {/* Dark Pigeon Gray Goggles */}
+    <circle cx="52" cy="38" r="8" fill="none" stroke="#57534E" strokeWidth="2.5"/>
+    <line x1="45" y1="38" x2="46" y2="38" stroke="#57534E" strokeWidth="2"/>
+     {/* Makeshift Newspaper Hat - for extra genius points */}
+    <path d="M40,20 Q50,10 60,20 Q55,25 50,22 Q45,25 40,20 Z" fill="#A8A29E" stroke="#57534E" strokeWidth="1"/>
+    {/* Tiny wrench made of a paperclip - symbol of ingenuity */}
+    <path d="M65,55 L70,50 L75,55 L73,57 L67,57 Z M68,57 L68,62 L72,62 L72,57" fill="#A8A29E" stroke="#57534E" strokeWidth="1.5" transform="rotate(15 65 55)" />
   </svg>
 );

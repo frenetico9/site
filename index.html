@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PigeonPoopCoin ($POOP) - The Feathered Revolution!</title>
+    <title>PigeonPoopCoin ($POOP) - The Coo-Coin Revolution!</title>
+    <!-- Consider adding a pigeon-themed favicon here! -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* Custom animation for HeroSection mascot image */
       @keyframes bounce-slow {
         0%, 100% {
-          transform: translateY(-3%);
+          transform: translateY(-4%); /* Slightly more bounce */
           animation-timing-function: cubic-bezier(0.8,0,1,1);
         }
         50% {
@@ -49,6 +50,7 @@
       }
       body {
         font-family: 'Inter', sans-serif; 
+        scroll-behavior: smooth; /* Added for smooth scrolling on anchor links */
       }
     </style>
     <!-- Google Fonts: Inter for body, Luckiest Guy for display, Bangers (optional alternative display) -->
@@ -65,17 +67,25 @@
             },
             colors: { 
               pigeon: {
-                light: '#A8A29E', 
-                DEFAULT: '#78716C', 
-                dark: '#57534E', 
+                light: '#A8A29E', // Light grey, like a pigeon's belly
+                DEFAULT: '#78716C', // Mid grey, classic pigeon
+                dark: '#57534E', // Dark grey, for shadows or accents
               },
-              poopYellow: { 
-                DEFAULT: '#FACC15', 
-                dark: '#EAB308', 
+              poopYellow: { // The color of... well, valuable birdseed?
+                light: '#FDE047', // Lighter yellow
+                DEFAULT: '#FACC15', // Main yellow
+                dark: '#EAB308', // Darker, richer yellow
+              },
+              skyBlue: { // For backgrounds or accents
+                light: '#BAE6FD',
+                DEFAULT: '#7DD3FC',
               }
             },
             zIndex: { // Ensure PoopEmojiRain is on top
               '1000': '1000',
+            },
+            animation: { // Added bounce-slow here to be centrally managed by Tailwind
+              'bounce-slow': 'bounce-slow 3s infinite',
             }
           }
         }
@@ -93,7 +103,7 @@
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>You need to enable JavaScript to run this app. Or learn to communicate via coos.</noscript>
     <div id="root" class="flex flex-col"></div>
     <script type="module" src="./index.tsx"></script>
 <script type="module" src="/index.tsx"></script>

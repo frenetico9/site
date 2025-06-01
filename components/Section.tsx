@@ -17,13 +17,16 @@ const Section: React.FC<SectionProps> = ({
   children, 
   className = '', 
   title, 
-  titleClassName = 'font-display text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-center', 
+  // Changed title to be more prominent, using poopYellow-dark
+  titleClassName = 'font-display text-4xl md:text-5xl lg:text-6xl font-bold text-poopYellow-dark mb-4 text-center drop-shadow-sm', 
   subtitle, 
-  subtitleClassName = 'text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto',
-  containerClassName = 'container mx-auto px-4 sm:px-6 lg:px-8'
+  // Adjusted subtitle for better readability and emphasis
+  subtitleClassName = 'text-lg md:text-xl text-pigeon-dark mb-10 md:mb-12 text-center max-w-3xl mx-auto font-medium',
+  containerClassName = 'container mx-auto px-4 sm:px-6 lg:px-8',
 }) => {
   return (
-    <section id={id} className={`py-16 md:py-24 ${className}`}>
+    // Added pt-16 to account for sticky navbar height, can be adjusted
+    <section id={id} className={`py-16 md:py-24 relative ${className}`}>
       <div className={containerClassName}>
         {title && <h2 className={titleClassName}>{title}</h2>}
         {subtitle && <p className={subtitleClassName}>{subtitle}</p>}
